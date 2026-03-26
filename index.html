@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patient Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">Patient<br/>Portal</div>
+      <div class="nav-icons">
+        <div class="nav-item">👤</div>
+        <div class="nav-item">📊</div>
+        <div class="nav-item">📅</div>
+        <div class="nav-item">⚙️</div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <section class="profile">
+<div class="patient-card">
+          <div class="profile-image">
+            <img id="patient-img" src="" alt="Patient" style="width:80px;height:80px;border-radius:50%;object-fit:cover;">
+          </div>
+          <div class="profile-details">
+            <h2 id="patient-name">Loading...</h2>
+            <p id="patient-details">Loading...</p>
+          </div>
+          <button id="download-zip" class="download-btn">Download Data (ZIP)</button>
+        </div>
+
+        <div class="vitals">
+          <div class="vital-box">
+            <h3>Respiratory Rate</h3>
+            <p id="resp-rate">-- bpm</p>
+          </div>
+          <div class="vital-box">
+            <h3>Temperature</h3>
+            <p id="temp">-- °F</p>
+          </div>
+          <div class="vital-box">
+            <h3>Heart Rate</h3>
+            <p id="heart-rate">-- bpm</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="chart-section">
+        <h3>Blood Pressure</h3>
+        <canvas id="bpChart"></canvas>
+      </section>
+    </main>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <script type="module" src="js/main.js"></script>
+  
+</body>
+</html>
